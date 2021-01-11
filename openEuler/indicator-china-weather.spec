@@ -1,20 +1,20 @@
 %define debug_package %{nil}
 Name:           indicator-china-weather
-Version:        3.0.4
+Version:        3.1.0
 Release:        1
 Summary:        The weather data are from the heweather API s6 version.
-License:        GPL-3+
+License:        GPL+
 URL:            https://github.com/UbuntuKylin/indicator-china-weather
 Source0:        %{name}-%{version}.tar.gz
 
+BuildRequires:  qtchooser
+BuildRequires:  qt5-qtx11extras-devel
 BuildRequires:  qt5-qttools-devel
 BuildRequires:  qt5-qtscript-devel
-BuildRequires:  qtchooser
-# BuildRequires:  qtbase5-dev-tools
 BuildRequires:  qt5-qtbase-devel
+BuildRequires:  qt5-linguist
 BuildRequires:  pkgconf
 BuildRequires:  libX11-devel
-BuildRequires:  qt5-qtx11extras-devel
 BuildRequires:  kf5-kwindowsystem-devel
 BuildRequires:  gsettings-qt-devel
 BuildRequires:  GeoIP-devel
@@ -60,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/man/man1/indicator-china-weather.1.gz
 
 %changelog
-* Wed Dec 30 2020 lvhan <lvhan@kylinos.cn> - 3.0.4-1
-- update to upstream version 3.0.4
+* Wed Dec 30 2020 lvhan <lvhan@kylinos.cn> - 3.1.0-1
+- update to upstream version 3.1.0-32

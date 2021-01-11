@@ -4,5 +4,5 @@ ts_file_list=(`ls translations/*.ts`)
 
 for ts in "${ts_file_list[@]}"
 do
-	lrelease "${ts}"
+	lrelease-qt5 "${ts}"
 done
