@@ -70,7 +70,8 @@ MainWindow::MainWindow(QWidget *parent) :
     addCityAction = new AddCityAction(menu);
     addCityAction->setText(tr("Add City"));
     aboutAction = new QAction(tr("About"),menu);
-    actions<<addCityAction<<aboutAction;
+//    actions<<addCityAction<<aboutAction;
+    actions<<addCityAction;
     menu->addActions(actions);
     setBtn->setMenu(menu);
     connect(addCityAction, &AddCityAction::requestSetCityName, this, [=] (QString cityName) {
@@ -214,7 +215,8 @@ void MainWindow::initControlQss()
 
     setBtn->setFixedSize(30,30);
     //menu跟主题走
-    menu->setFixedSize(120,66);
+//    menu->setFixedSize(120,66);
+    menu->setFixedSize(120,40);
     menu->setStyleSheet("QMenu{border-radius:3px;background-color:white;color:black;}"
                         "QMenu::item:selected {color:white;background-color: #2dabf9;}"
                         "QMenu::item {font-size:14px;border-radius:4px;background-color: transparent;}");
